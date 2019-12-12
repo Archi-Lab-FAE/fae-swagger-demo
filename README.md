@@ -24,7 +24,7 @@ application:
 ```bash
 unzip ./spring-server-generated.zip -d spring-server-generated
 cd spring-server-generated
-./mvn clean spring-boot:run
+mvn clean spring-boot:run
 ```
 
 ## View the generated Swagger UI or use the API
@@ -40,4 +40,5 @@ curl --verbose --header "Content-Type: application/json" --data @./example-pet.j
 
 Everything works fine if calls to the API endpoints return HTTP status code 501
 (not implemented) and no body, since this is what all generated method stubs
-return by default. You can now start implementing your API endpoints.
+return by default. You can now start implementing your API endpoints by
+overriding the methods of the generated Spring controllers and interfaces.
